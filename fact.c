@@ -1,25 +1,29 @@
 #include <stdio.h>
 #include <math.h>
 
-main()
+void main()
 {
-    int n, i, fact;
+    int n, fact;
 
     printf("Give an interger to calculate its factorial: \n");
     scanf("%d",&n);
 
     fact=1;
-    if (n<0)
+    while (n<0)
     {
-       printf("Only non-negative integers are allowed");
+       printf("Only non-negative integers are allowed\n");
+       printf("Give a non-negative interger: \n");
+       scanf("%d",&n);
     }
-    else if (n==0 || n==1)
+
+    if (n==0 || n==1)
     {
        printf("%d!=%d",n,fact);
     }
     else
     {
-      for ( i = 1; i <= n; i++)
+      int i;
+      for ( i = 2; i <= n; i++)
       {
         fact=fact*i;
       }
