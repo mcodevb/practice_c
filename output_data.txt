@@ -1,3 +1,1 @@
-You have entered: 35 44 5
- Numbers in ascending order: 5 35 44
- Numbers in descending order: 44 35 5
+approximate value of e = 2.718282 at 9th iteration
