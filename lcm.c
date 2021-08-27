@@ -10,6 +10,8 @@ int main()
     outputfile = fopen("output_data.txt","w");
     
     
+
+    
     lcm = n1 * (n2 / gcd);
 
     fclose(inputfile);
