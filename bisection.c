@@ -1,4 +1,4 @@
-// Bisection method 
+// Bisection method in C
 #include<stdio.h>
 #include<math.h>
 
