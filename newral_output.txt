@@ -1,0 +1,4 @@
+x = 10.000000, tolerance = 0.000010 ,
+maximum number of iteration = 50 
+ 
+Approximate value of the root is: 3.000000

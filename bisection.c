@@ -18,6 +18,7 @@ int main()
  
     if (f(a) * f(b) > 0.0)
     {
+float a ,b 
         printf("Change the values of a and/or b.\n");
     } 
     else
