@@ -1,0 +1,1 @@
+Sum of all even Fibonacci numbers below 4000000 is: 4613732

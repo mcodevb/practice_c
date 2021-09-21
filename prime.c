@@ -1,8 +1,8 @@
 // Simple C program to count prime numbers upto n really fast
 // Written by Mainul Hossain <getmainul1@gmail.com>
-
-#include <stdio.h>  
 #include <math.h>
+#include <stdio.h>  
+
 long long int main() {
     
   long long int n,i,count=1, num=3,flag;
@@ -19,7 +19,7 @@ long long int main() {
           flag=1;
           for (i = 1; i <= count; i++)
           {
-            if (prime[i]<=sqrt(n)){
+            if (prime[i]<=sqrt(num)){
 //                printf("i=%d, prime[i] = %d, num=%d \n",i,prime[i],num);
                 if (num%prime[i]==0){
                    flag=0;
