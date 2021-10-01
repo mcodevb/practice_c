@@ -1,0 +1,14 @@
+MMC 43: Numerical Computer Laboratory
+Full Marks: 50 : Credit: 4
+
+
+Programming in C: Introduction to C. Data types, variables, and constants. Operators and Expression: Precedence and Associativity. Unary plus and Minus operators. Binary Arithmetic operators, Arithmetic assignment operators, Relational operators, Logical operators, increment and decrement operators, conditional operators. Arithmetic expressions, Cast operator. Statements --- Assignment statement, Input/output statements.
+Control Statements: Decision making with if statement, if-else statement, Nesting of if-else statements, switch statement, goto statement, while statement, do statement, for statement, break and continue statements.
+
+Interpolation by --- Newtons divided difference formula, Cubic Spline
+Integration by --- Romberg’s formula, Gaussian quadrature formula, Chebyshev’s quadrature formula
+Eigenvalues and Eigenvectors of a matrix by --- Power method, Jacobis method
+Matrix inversion by LU- decomposition
+Finding the solution of Initial Value Problem ( IVP ) for ODE by Runge-Kutta method, Adams method, Milnes method
+Finding the solution of two-point Boundary Value Problems ( BVP ) by Shooting method
+Finding the solution of Partial Differential Equations ( PDE ) by Finite Difference method
