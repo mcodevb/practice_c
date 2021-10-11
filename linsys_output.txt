@@ -1,0 +1,4 @@
+Solution of the given problem is: 
+   x(1) = 0.230769
+   x(2) = 0.153846
+   x(3) = 0.153846
