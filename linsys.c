@@ -37,12 +37,12 @@ int main(void)
         printf("   %f\n", b[ii]);
     }
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i < n-1; i++)
     {
         for (j = i + 1; j < n; j++)
         {
             multiplier = (a[j][i] / a[i][i]);
-            printf("multiplier = %f\n", multiplier);
+            // printf("multiplier = %f\n", multiplier);
             for (k = i; k < n; k++)
             {
                 a[j][k] = a[j][k] - multiplier * a[i][k];
