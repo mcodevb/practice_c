@@ -2,7 +2,7 @@
 float displayNumbers(float num[10][10]);
 
 int main() {
-  float num[10][10]; // declare
+  float num[10][10]; // declare variables
   printf("Enter 4 numbers:\n");
   for (int i = 0; i < 2; ++i) {
     for (int j = 0; j < 2; ++j) {
