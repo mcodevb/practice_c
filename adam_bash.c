@@ -3,7 +3,7 @@
 float f(float x, float y)
 	{
 	  float out;
-	  out= (2*y)/x;
+	  out= 1+ x*y;
 	  return out;
 	}
 
@@ -29,7 +29,7 @@ float main()
     {
         yp[i] = y[i];
     }
-    for (i = 0; i <= 2; i++)
+    for (i = 0; i <= 3; i++)
     {
         fprintf(fp2, "y(%f)=%f\n", x[i], y[i]);
     }
@@ -52,7 +52,7 @@ loop:    yc[i+1]=yp[i]+(h/24)*(f(x[i-2],yp[i-2])-5*f(x[i-1],yp[i-1])+19*f(x[i],y
         else
         {
             yp[i + 1] = yc[i + 1];
-            fprintf(fp2, "yptest2=%f\n", yp[i + 1]);
+            // fprintf(fp2, "yptest2=%f\n", yp[i + 1]);
             goto loop;
         }
         yp[i + 1] = yc[i + 1];
