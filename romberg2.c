@@ -12,9 +12,11 @@ int main(){
     h=xn-x0;
     t[0][0]=h/2*((f(x0))+ (f(xn)));
     for(i=1;i<=p;i++){
+        printf("test\n");
         sl=pow(2,i-1);
         sm=0;
         for(k=1;k<=sl;k++){
+            printf("   mmmm\n");
             a=x0+(2*k-1)*h/pow(2,i);
             sm=sm+(f(a));
         }
