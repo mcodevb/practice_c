@@ -4,8 +4,8 @@ void main()
     int n = 5, i, j;
     float x[5], y[5], diff[5][5], xin, sum, term;
     FILE *fp1, *fp2;
-    fp1 = fopen("ndd_input.txt", "r");
-    fp2 = fopen("ndd_output.txt", "w");
+    fp1 = fopen("newton_diff.dat", "r");
+    fp2 = fopen("newton_diff.out", "w");
 
     for (i = 0; i < n; i++)
     {
