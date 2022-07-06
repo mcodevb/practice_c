@@ -3,18 +3,25 @@
 float f(float x, float y)
 	{
 	  float out;
-	  out= (1- x*y)/(x*x);
+      // out = 1+ x*y;
+      // out = x*x+y*y;
+      out= (1- x*y)/(x*x);
+      //out = (2-y*y)/(5*x);
+      // out = (x+y)/2;
+	  //out= 2*exp(x)-y;
+      //out  = x*pow(y,1.0/3.0);
+      // uncomment one of the above ODEs
 	  return out;
 	}
 
 float main()
 {
-    int i, n;
-    float k1, k2, k3, k4, h, x[100], y[100], k, yp[100], yc[100], eps, err, l;
+    int i,j, n, maxiter = 10;
+    float k1, k2, k3, k4, h, x[100], y[100], k, yp[100], yc[100], tol, error;
     FILE *fopen(), *fp1, *fp2;
-    fp1 = fopen("adambash_input.txt", "r");
-    fp2 = fopen("adambash_output.txt", "w");
-    fscanf(fp1, "%f%f%f%f%d", &x[0], &y[0], &h, &eps, &n);
+    fp1 = fopen("adam.dat", "r");
+    fp2 = fopen("adam.out", "w");
+    fscanf(fp1, "%f%f%f%f%d", &x[0], &y[0], &h, &tol, &n);
     for (i = 0; i <= 2; i++)
     {
         k1 = h * f(x[i], y[i]);
@@ -41,23 +48,21 @@ float main()
         // fprintf(fp2,"yptest=%f\n",yp[i+1]);
         x[i + 1] = x[i] + h;
         // corrector formula
-loop:    yc[i+1]=yp[i]+(h/24)*(f(x[i-2],yp[i-2])-5*f(x[i-1],yp[i-1])+19*f(x[i],yp[i])+9*f(x[i+1],yp[i+1]));
-        // fprintf(fp2,"yctest=%f\n",yc[i+1]);
-        l = yp[i + 1] - yc[i + 1];
-        // fprintf(fp2,"l=%f\n",d);
-        err = fabs(yp[i + 1] - yc[i + 1]);
-        // fprintf(fp2,"d=%f\n",d);
-        if (err < eps)
-            fprintf(fp2, "y(%f)=%f\n", x[i + 1], yc[i + 1]);
-        else
+        for ( j = 0; j < maxiter; j++)
         {
-            yp[i + 1] = yc[i + 1];
-            // fprintf(fp2, "yptest2=%f\n", yp[i + 1]);
-            goto loop;
+            yc[i+1]=yp[i]+(h/24)*(f(x[i-2],yp[i-2])-5*f(x[i-1],yp[i-1])+19*f(x[i],yp[i])+9*f(x[i+1],yp[i+1]));
+            error = fabs(yp[i + 1] - yc[i + 1]);
+             if (error < tol)
+                {
+                    fprintf(fp2, "y(%f)=%f\n", x[i + 1], yc[i + 1]);
+                    break;  // the moment yc and yp are close enough, stop iterating
+                }
+                else
+                {
+                    yp[i + 1] = yc[i + 1];
+                }
         }
-        yp[i + 1] = yc[i + 1];
-    }
-
+    }   
     fclose(fp1);
     fclose(fp2);
 }
