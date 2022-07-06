@@ -3,9 +3,10 @@
 float f(float x, float y)
 	{
 	  float out;
+       out = 2*y/x;
       // out = 1+ x*y;
       // out = x*x+y*y;
-       out= (1- x*y)/(x*x);
+      // out= (1- x*y)/(x*x);
       //out = (2-y*y)/(5*x);
       // out = (x+y)/2;
 	  // out= 2*exp(x)-y;
